@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_food"
+        android:title="Pantai"
+        android:icon="@drawable/logo1" />
+    <item android:id="@+id/action_movie"
+        android:title="Coban"
+        android:icon="@drawable/logo2" />
+    <item android:id="@+id/action_discount"
+        android:title="Taman"
+        android:icon="@drawable/logo3" />
+</menu>
