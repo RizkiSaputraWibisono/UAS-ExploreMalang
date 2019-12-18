@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen1">
+    android:background="@drawable/splash_mlg">
 
     <LinearLayout
-        android:layout_width="362dp"
-        android:layout_height="345dp"
+        android:layout_width="wrap_content"
+        android:layout_height="215dp"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="165dp"
-            android:layout_height="225dp"
-            android:src="@drawable/logo2" />
-
-        <TextView
-            android:layout_width="290dp"
-            android:layout_height="91dp"
-            android:text="Lagi di Malang? \n   \n             Bingung mau kemana?"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="218dp"
+        android:layout_height="115dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="171dp"
+        app:srcCompat="@mipmap/logo2" />
+
+    <TextView
+
+        android:id="@+id/TextView1"
+        android:layout_width="363dp"
+        android:layout_height="104dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="474dp"
+        android:text="Lagi di Malang? Bingung Mau Kemana? \nKamu Install Aplikasi yang Tepat!"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
 </RelativeLayout>
