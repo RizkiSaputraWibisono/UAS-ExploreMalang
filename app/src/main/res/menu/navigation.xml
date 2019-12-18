@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/action_food"
-        android:title="Pantai"
-        android:icon="@drawable/logo1" />
-    <item android:id="@+id/action_movie"
-        android:title="Coban"
-        android:icon="@drawable/logo2" />
-    <item android:id="@+id/action_discount"
-        android:title="Taman"
-        android:icon="@drawable/logo3" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item android:id="@+id/action_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item android:id="@+id/action_genre"
+        android:title="Kategori"
+        android:icon="@drawable/ic_genre" />
+    <item android:id="@+id/action_favorit"
+        android:title="Favorit"
+        android:icon="@drawable/ic_favorite" />
+    <item android:id="@+id/action_profile"
+        android:title="Profil"
+        android:icon="@drawable/ic_man_user" />
 </menu>
