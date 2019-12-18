@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 import polinema.ac.id.ExploreMalang.R;
 
-public class MovieFragment extends Fragment {
+public class FavoritFragment extends Fragment {
 
 
-    public MovieFragment() {
+    public FavoritFragment() {
         // Required empty public constructor
     }
 
@@ -22,7 +22,7 @@ public class MovieFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie, container, false);
+        return inflater.inflate(R.layout.fragment_kategori, container, false);
     }
 
 }

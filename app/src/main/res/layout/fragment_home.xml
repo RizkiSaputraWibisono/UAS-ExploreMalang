@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/malang"
+tools:context=".UAS.fragments.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="331dp"
+        android:layout_height="193dp"
+        android:layout_marginBottom="60dp"
+        android:text="Malang merupakan sebuah Kabupaten / Kota di Jawa Timur, Kabupaten / Kota ini memiliki sejuta pesona dan panaroma alam yang menakjubkan dan masih banyak yang tersembunyi, sehingga masih banyak orang yang belum mengetahui akan keindahan dan tempat keren yang ada di Malang. Malang punya banyak spot objek wisata keren, mulai dari situs budaya, situs bersejarah, spot foto foto kekinian, sampai air terjun yang sangat memanjakan mata dan harus segera kalian explore. Ayo Explore Malang!"
+
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

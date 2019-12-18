@@ -10,9 +10,9 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import polinema.ac.id.ExploreMalang.R;
-import polinema.ac.id.ExploreMalang.UAS.fragments.DiscountFragment;
-import polinema.ac.id.ExploreMalang.UAS.fragments.FoodFragment;
-import polinema.ac.id.ExploreMalang.UAS.fragments.MovieFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.KategoriFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.HomeFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.FavoritFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new FoodFragment());
+        loadFragment(new HomeFragment());
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -42,16 +42,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Fragment fragment = null;
         switch (menuItem.getItemId()) {
             case R.id.action_home:
-                fragment = new FoodFragment();
+                fragment = new HomeFragment();
                 break;
             case R.id.action_genre:
-                fragment = new MovieFragment();
+                fragment = new FavoritFragment();
                 break;
             case R.id.action_favorit:
-                fragment = new DiscountFragment();
+                fragment = new KategoriFragment();
                 break;
             case R.id.action_profile:
-                fragment = new DiscountFragment();
+                fragment = new KategoriFragment();
                 break;
         }
         return loadFragment(fragment);
