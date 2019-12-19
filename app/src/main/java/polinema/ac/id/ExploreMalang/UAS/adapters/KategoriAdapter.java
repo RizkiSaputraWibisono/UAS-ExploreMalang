@@ -1,6 +1,7 @@
 package polinema.ac.id.ExploreMalang.UAS.adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,7 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull KategoriAdapter.MyViewHolder holder, final int position) {
-
+        final Bundle b =new Bundle();
         Kategori kategori = itemKategori.get(position);
         holder.gambarKategori.setImageResource(kategori.getGambarKategori());
         holder.namaKategori.setText(kategori.getNamaKategori());
@@ -49,28 +50,13 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (position == 0) {
-
+                    b.putInt("pos",position);
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     Fragment myFragment = new DetailFragment();
+                    myFragment.setArguments(b);
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
 
-                } else if (position == 1) {
 
-
-                }else if (position == 2) {
-
-                }else if (position == 3) {
-
-                }else if (position == 4) {
-
-                }else if (position == 5) {
-
-                }else if (position == 6) {
-
-                }else if (position == 7) {
-
-                }
             }
         });
     }
