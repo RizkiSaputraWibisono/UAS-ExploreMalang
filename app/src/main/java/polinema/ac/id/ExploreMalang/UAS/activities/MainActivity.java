@@ -15,6 +15,7 @@ import polinema.ac.id.ExploreMalang.R;
 import polinema.ac.id.ExploreMalang.UAS.fragments.KategoriFragment;
 import polinema.ac.id.ExploreMalang.UAS.fragments.HomeFragment;
 import polinema.ac.id.ExploreMalang.UAS.fragments.FavoritFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.UserFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -47,13 +48,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new HomeFragment();
                 break;
             case R.id.action_genre:
-                fragment = new FavoritFragment();
+                fragment = new KategoriFragment();
                 break;
             case R.id.action_favorit:
-                fragment = new KategoriFragment();
+                fragment = new FavoritFragment();
                 break;
             case R.id.action_profile:
-                fragment = new KategoriFragment();
+                fragment = new UserFragment();
                 break;
         }
         return loadFragment(fragment);
