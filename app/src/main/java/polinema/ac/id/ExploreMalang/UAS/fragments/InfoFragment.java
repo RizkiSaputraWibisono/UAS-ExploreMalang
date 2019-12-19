@@ -33,6 +33,10 @@ public class InfoFragment extends Fragment {
 
     TextView namaInfo;
     ImageView gambarInfo;
+    TextView jarakInfo;
+    TextView tiketInfo;
+    TextView deskripsiInfo;
+
 
     List<Info> itemInfo = new ArrayList<>();
 
@@ -45,18 +49,12 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Info info = new Info("Coban Rondo",R.drawable.cobanrondo);
-        itemInfo.add(info);
-        info = new Info("Coban Jodo",R.drawable.cobanjodo);
+        Info info = new Info("Coban Rondo",R.drawable.cobanrondo,"Jarak dari Malang Kota : 27 Km","Tiket Masuk : Rp. 25.000","Air Terjun Coban Rondo merupakan air terjun yang terletak di Kecamatan Pujon, Kota Batu, Kabupaten Malang, Jawa Timur. Air terjun ini mudah dijangkau oleh kendaraan umum. Akses yang paling mudah adalah melalui jalan raya dari Malang ke Batu dari sebelah timur atau dari Kediri ke Pare menuju Malang dari arah barat.");
         itemInfo.add(info);
 
-        view = inflater.inflate(R.layout.fragment_detail, container, false);
+        view = inflater.inflate(R.layout.fragment_info, container, false);
 
-//        namaDetail = view.findViewById(R.id.gambarDetail);
-//        namaDetail
-
-
-        recyclerView = view.findViewById(R.id.Detail);
+        recyclerView = view.findViewById(R.id.Info);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         infoAdapter = new InfoAdapter(getActivity(),itemInfo);
         recyclerView.setAdapter(infoAdapter);

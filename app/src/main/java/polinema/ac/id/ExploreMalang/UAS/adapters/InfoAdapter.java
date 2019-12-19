@@ -44,7 +44,9 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
         Info info = itemInfo.get(position);
         holder.gambarInfo.setImageResource(info.getGambarInfo());
         holder.namaInfo.setText(info.getNamaInfo());
-
+        holder.jarakInfo.setText(info.getJarakInfo());
+        holder.tiketInfo.setText(info.getTiketInfo());
+        holder.deskripsiInfo.setText(info.getDeskripsiInfo());
     }
 
     @Override
@@ -55,11 +57,17 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView gambarInfo;
         public TextView namaInfo;
+        public TextView jarakInfo;
+        public TextView tiketInfo;
+        public TextView deskripsiInfo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             gambarInfo = itemView.findViewById(R.id.gambarInfo);
             namaInfo = itemView.findViewById(R.id.namaInfo);
+            jarakInfo = itemView.findViewById(R.id.jarakInfo);
+            tiketInfo = itemView.findViewById(R.id.tiketInfo);
+            deskripsiInfo = itemView.findViewById(R.id.deskripsiInfo);
         }
     }
 }
