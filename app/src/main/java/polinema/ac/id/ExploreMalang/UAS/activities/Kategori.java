@@ -6,6 +6,16 @@ public class Kategori {
     private String ketKategori;
     private int gambarKategori;
 
+    public Kategori(String namaKategori, String ketKategori, int gambarKategori) {
+        this.namaKategori = namaKategori;
+        this.ketKategori = ketKategori;
+        this.gambarKategori = gambarKategori;
+    }
+
+    public Kategori(){
+
+    }
+
     public String getNamaKategori() {
         return namaKategori;
     }

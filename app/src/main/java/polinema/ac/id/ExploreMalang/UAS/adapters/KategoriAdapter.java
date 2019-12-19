@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -42,6 +43,12 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
         holder.gambarKategori.setImageResource(kategori.getGambarKategori());
         holder.namaKategori.setText(kategori.getNamaKategori());
         holder.keteranganKategori.setText(kategori.getKetKategori());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
     }
 
     @Override
@@ -53,12 +60,14 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
         public ImageView gambarKategori;
         public TextView namaKategori;
         public TextView keteranganKategori;
+        public CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             gambarKategori = itemView.findViewById(R.id.gambarKategori);
             namaKategori = itemView.findViewById(R.id.namaKategori);
             keteranganKategori = itemView.findViewById(R.id.keteranganKategori);
+            cardView = itemView.findViewById(R.id.cardViewKategori);
         }
     }
 }

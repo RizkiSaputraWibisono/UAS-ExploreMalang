@@ -12,9 +12,9 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import polinema.ac.id.ExploreMalang.R;
-import polinema.ac.id.ExploreMalang.UAS.fragments.KategoriFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.Favorit2Fragment;
 import polinema.ac.id.ExploreMalang.UAS.fragments.HomeFragment;
-import polinema.ac.id.ExploreMalang.UAS.fragments.FavoritFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.Kategori2Fragment;
 import polinema.ac.id.ExploreMalang.UAS.fragments.UserFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new HomeFragment();
                 break;
             case R.id.action_genre:
-                fragment = new KategoriFragment();
+                fragment = new Kategori2Fragment();
                 break;
             case R.id.action_favorit:
-                fragment = new FavoritFragment();
+                fragment = new Favorit2Fragment();
                 break;
             case R.id.action_profile:
                 fragment = new UserFragment();
