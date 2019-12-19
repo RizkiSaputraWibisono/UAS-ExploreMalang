@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -54,6 +58,17 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
         holder.tiketInfo.setText(info.getTiketInfo());
         holder.deskripsiInfo.setText(info.getDeskripsiInfo());
 
+        holder.button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("message");
+
+                myRef.setValue("Hello, World!");
+
+            }
+        });
+
 
     }
 
@@ -68,6 +83,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
         public TextView jarakInfo;
         public TextView tiketInfo;
         public TextView deskripsiInfo;
+        public Button button3;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -76,6 +92,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
             jarakInfo = itemView.findViewById(R.id.jarakInfo);
             tiketInfo = itemView.findViewById(R.id.tiketInfo);
             deskripsiInfo = itemView.findViewById(R.id.deskripsiInfo);
+            button3 = itemView.findViewById(R.id.button3);
         }
     }
 }

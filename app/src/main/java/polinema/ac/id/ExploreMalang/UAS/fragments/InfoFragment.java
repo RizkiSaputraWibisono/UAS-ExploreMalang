@@ -3,6 +3,7 @@ package polinema.ac.id.ExploreMalang.UAS.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,9 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +41,7 @@ public class InfoFragment extends Fragment {
     TextView jarakInfo;
     TextView tiketInfo;
     TextView deskripsiInfo;
+    Button button3;
 
 
     List<Info> itemInfo = new ArrayList<>();
@@ -80,7 +86,12 @@ public class InfoFragment extends Fragment {
         infoAdapter = new InfoAdapter(getActivity(),itemInfo);
         recyclerView.setAdapter(infoAdapter);
         Toast.makeText(getActivity(), String.valueOf(pos1), Toast.LENGTH_SHORT).show();
+
         return view;
     }
 
 }
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference myRef = database.getReference("message");
+//
+//myRef.setValue("Hello, World!");

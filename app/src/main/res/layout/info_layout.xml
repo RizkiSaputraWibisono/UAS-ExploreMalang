@@ -74,7 +74,8 @@
             android:layout_width="397dp"
             android:layout_height="50dp"
             android:layout_marginTop="600dp"
-            android:text="Add to Wishlist" />
+            android:text="Add to Wishlist"
+            />
 
     </androidx.cardview.widget.CardView>
 
