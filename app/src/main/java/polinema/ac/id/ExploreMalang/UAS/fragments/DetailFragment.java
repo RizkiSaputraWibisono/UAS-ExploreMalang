@@ -48,7 +48,6 @@ public class DetailFragment extends Fragment {
         Bundle b = getArguments();
         int pos = b.getInt("pos");
 
-
         if(pos == 0){
             Detail detail = new Detail("Coban Rondo",R.drawable.cobanrondo);
             itemDetail.add(detail);
@@ -64,7 +63,33 @@ public class DetailFragment extends Fragment {
         else if(pos == 1){
             Detail detail = new Detail("Pantai Teluk Asmoro",R.drawable.telukasmara);
             itemDetail.add(detail);
-            detail = new Detail("Pantai Balekambang",R.drawable.cobanjodo);
+            detail = new Detail("Pantai Balekambang",R.drawable.telukasmara);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Pelangi",R.drawable.cobanpelangi);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Glotak",R.drawable.cobanglotak);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Sumberpitu",R.drawable.sumberpitu);
+            itemDetail.add(detail);
+        }
+
+        else if(pos == 2){
+            Detail detail = new Detail("Pantai Teluk Asmoro",R.drawable.telukasmara);
+            itemDetail.add(detail);
+            detail = new Detail("Pantai Balekambang",R.drawable.telukasmara);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Pelangi",R.drawable.cobanpelangi);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Glotak",R.drawable.cobanglotak);
+            itemDetail.add(detail);
+            detail = new Detail("Coban Sumberpitu",R.drawable.sumberpitu);
+            itemDetail.add(detail);
+        }
+
+        else if(pos == 3){
+            Detail detail = new Detail("Pantai Teluk Asmoro",R.drawable.telukasmara);
+            itemDetail.add(detail);
+            detail = new Detail("Pantai Balekambang",R.drawable.telukasmara);
             itemDetail.add(detail);
             detail = new Detail("Coban Pelangi",R.drawable.cobanpelangi);
             itemDetail.add(detail);
@@ -76,15 +101,11 @@ public class DetailFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_detail, container, false);
 
-//        namaDetail = view.findViewById(R.id.gambarDetail);
-//        namaDetail
-
-
         recyclerView = view.findViewById(R.id.Detail);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        detailAdapter = new DetailAdapter(getActivity(),itemDetail);
+        detailAdapter = new DetailAdapter(getActivity(),itemDetail, pos);
         recyclerView.setAdapter(detailAdapter);
-        Toast.makeText(getActivity(), String.valueOf(pos), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "Detail " + String.valueOf(pos), Toast.LENGTH_SHORT).show();
 
         return view;
     }

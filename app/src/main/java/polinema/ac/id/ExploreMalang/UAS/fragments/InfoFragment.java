@@ -48,9 +48,30 @@ public class InfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Bundle b = getArguments();
+        int pos1 = b.getInt("num");
+        int pos = b.getInt("posit");
 
-        Info info = new Info("Coban Rondo",R.drawable.cobanrondo,"Jarak dari Malang Kota : 27 Km","Tiket Masuk : Rp. 25.000","Air Terjun Coban Rondo merupakan air terjun yang terletak di Kecamatan Pujon, Kota Batu, Kabupaten Malang, Jawa Timur. Air terjun ini mudah dijangkau oleh kendaraan umum. Akses yang paling mudah adalah melalui jalan raya dari Malang ke Batu dari sebelah timur atau dari Kediri ke Pare menuju Malang dari arah barat.");
-        itemInfo.add(info);
+        if(pos1 == 0){
+            if (pos == 0){
+                Info info = new Info("Coban Rondo",R.drawable.cobanrondo,"Jarak dari Malang Kota : 27 Km","Tiket Masuk : Rp. 25.000","Air Terjun Coban Rondo merupakan air terjun yang terletak di Kecamatan Pujon, Kota Batu, Kabupaten Malang, Jawa Timur. Air terjun ini mudah dijangkau oleh kendaraan umum. Akses yang paling mudah adalah melalui jalan raya dari Malang ke Batu dari sebelah timur atau dari Kediri ke Pare menuju Malang dari arah barat.");
+                itemInfo.add(info);
+            }
+
+            else if (pos == 1){
+                Info info = new Info("Coban Jodo",R.drawable.cobanjodo,"Jarak dari Malang Kota : 25 Km","Tiket Masuk : Rp. 10.000","Coban jodo terletak di desa bendolawang kec.jabung kab.malang atau kita bisa mengunjungi coban yang satu ini melewati desa benjor kec.tumpang kab.malang\n" +
+                        "\n" +
+                        "Untuk kali ini saya akan menceritakan rute menuju coban jodo melewati desa bendolawang.\n" +
+                        "\n" +
+                        "Untuk rute menuju tempat ini bila dari malang kota ambil arah menuju tumpang bila belum tau arah bisa cek di google maps dan arahkan ke desa bendolawang kec.tumpang");
+                itemInfo.add(info);
+            }
+
+            if (pos == 2){
+                Info info = new Info("Coban Pelangi",R.drawable.cobanpelangi,"Jarak dari Malang Kota : 27 Km","Tiket Masuk : Rp. 5.000","Rute menuju air terjun coban pelangi dari kota malang langsung  menuju ke wilayah Tumpang, perjalanan diteruskan ke arahDesa Gubug Klakah. Diharapakan pengunjung berhari-hati karena medan jalan menanjak dan licin.  Air terjun coban pelangi  berlokasi sebelum masuk persimpangan desa Jemplang . yaitu jalur untuk ke Gunung Semeru dan Gunung Bromo. Setelah pengunjung melalui Desa Gubuk Klakah disebelah kanan jalan sudah terdapat papan bertulisan “Air Terjun Coba Pelangi”.");
+                itemInfo.add(info);
+            }
+        }
 
         view = inflater.inflate(R.layout.fragment_info, container, false);
 
@@ -58,7 +79,7 @@ public class InfoFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         infoAdapter = new InfoAdapter(getActivity(),itemInfo);
         recyclerView.setAdapter(infoAdapter);
-        Toast.makeText(getActivity(), String.valueOf(itemInfo.size()), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), String.valueOf(pos1), Toast.LENGTH_SHORT).show();
         return view;
     }
 

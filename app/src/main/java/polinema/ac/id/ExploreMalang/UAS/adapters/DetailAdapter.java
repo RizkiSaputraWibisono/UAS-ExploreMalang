@@ -1,6 +1,7 @@
 package polinema.ac.id.ExploreMalang.UAS.adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,11 +26,13 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
     LayoutInflater layoutInflater;
     public List<Detail> itemDetail;
     Context c;
+    int num;
 
-    public DetailAdapter(Context c, List<Detail> itemDetail) {
+    public DetailAdapter(Context c, List<Detail> itemDetail,int num) {
         this.c = c;
         this.layoutInflater = LayoutInflater.from(this.c);
         this.itemDetail = itemDetail;
+        this.num = num;
     }
 
     @NonNull
@@ -43,6 +46,9 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull DetailAdapter.MyViewHolder holder, final int position) {
+        final Bundle b =new Bundle();
+
+        Bundle a = new Bundle();
 
         Detail detail = itemDetail.get(position);
         holder.gambarDetail.setImageResource(detail.getGambarDetail());
@@ -51,19 +57,14 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (position == 0) {
+                b.putInt("posit",position);
+                b.putInt("num",num);
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Fragment myFragment = new InfoFragment();
+                myFragment.setArguments(b);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
 
-                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    Fragment myFragment = new InfoFragment();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
 
-                } else if (position == 1) {
-
-
-                }else if (position == 2) {
-
-                }else if (position == 3) {
-                }
             }
         });
     }

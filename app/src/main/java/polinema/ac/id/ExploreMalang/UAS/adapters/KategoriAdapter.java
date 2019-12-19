@@ -50,11 +50,11 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    b.putInt("pos",position);
-                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    Fragment myFragment = new DetailFragment();
-                    myFragment.setArguments(b);
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
+                b.putInt("pos",position);
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Fragment myFragment = new DetailFragment();
+                myFragment.setArguments(b);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
 
 
             }
