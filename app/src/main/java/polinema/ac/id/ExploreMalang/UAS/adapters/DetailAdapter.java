@@ -8,12 +8,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import polinema.ac.id.ExploreMalang.R;
+import polinema.ac.id.ExploreMalang.UAS.fragments.DetailFragment;
+import polinema.ac.id.ExploreMalang.UAS.fragments.InfoFragment;
 import polinema.ac.id.ExploreMalang.UAS.models.Detail;
 
 public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHolder> {
@@ -38,7 +42,7 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
 
 
     @Override
-    public void onBindViewHolder(@NonNull DetailAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DetailAdapter.MyViewHolder holder, final int position) {
 
         Detail detail = itemDetail.get(position);
         holder.gambarDetail.setImageResource(detail.getGambarDetail());
@@ -47,7 +51,19 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (position == 0) {
 
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                    Fragment myFragment = new InfoFragment();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
+
+                } else if (position == 1) {
+
+
+                }else if (position == 2) {
+
+                }else if (position == 3) {
+                }
             }
         });
     }
