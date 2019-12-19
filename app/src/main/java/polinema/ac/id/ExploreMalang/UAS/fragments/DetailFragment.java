@@ -65,11 +65,11 @@ public class DetailFragment extends Fragment {
             itemDetail.add(detail);
             detail = new Detail("Pantai Balekambang",R.drawable.telukasmara);
             itemDetail.add(detail);
-            detail = new Detail("Coban Pelangi",R.drawable.cobanpelangi);
+            detail = new Detail("Pantai Ngeliyep",R.drawable.cobanpelangi);
             itemDetail.add(detail);
-            detail = new Detail("Coban Glotak",R.drawable.cobanglotak);
+            detail = new Detail("Pantai Sendang Biru",R.drawable.cobanglotak);
             itemDetail.add(detail);
-            detail = new Detail("Coban Sumberpitu",R.drawable.sumberpitu);
+            detail = new Detail("Pantai Ngudel",R.drawable.sumberpitu);
             itemDetail.add(detail);
         }
 
