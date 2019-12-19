@@ -1,4 +1,4 @@
-package polinema.ac.id.ExploreMalang.UAS.activities;
+package polinema.ac.id.ExploreMalang.UAS.models;
 
 public class Kategori {
 

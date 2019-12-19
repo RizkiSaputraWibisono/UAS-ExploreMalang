@@ -14,8 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import polinema.ac.id.ExploreMalang.R;
-import polinema.ac.id.ExploreMalang.UAS.activities.Detail;
-import polinema.ac.id.ExploreMalang.UAS.activities.Kategori;
+import polinema.ac.id.ExploreMalang.UAS.models.Detail;
 
 public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHolder> {
 
