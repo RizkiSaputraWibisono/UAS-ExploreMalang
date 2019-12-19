@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".UAS.activities.MainActivity">
 
     <FrameLayout
@@ -21,5 +22,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_3">
+    android:background="@color/bg_black">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_marginTop="482dp"
         android:layout_marginEnd="-156dp"
         android:layout_marginBottom="-126dp"
-        android:text="Jangan Lupa \nRating Apps Kami \ndi Playstore! \n♡ ♡ ♡ ♡ ♡"
+        android:text="Jangan Lupa \nRating Apps Kami \ndi Playstore! \n❤❤❤❤❤"
         android:textColor="@android:color/white"
         android:textSize="20dp"
         android:textStyle="bold" />
