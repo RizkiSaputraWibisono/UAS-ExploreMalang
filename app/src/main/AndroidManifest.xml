@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/logo3"
+        android:icon="@drawable/logo3"
         android:label="Explore Malang!"
-        android:roundIcon="@mipmap/logo3"
+        android:roundIcon="@drawable/logo3"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="polinema.ac.id.ExploreMalang.UAS.activities.WelcomeActivity"></activity>
