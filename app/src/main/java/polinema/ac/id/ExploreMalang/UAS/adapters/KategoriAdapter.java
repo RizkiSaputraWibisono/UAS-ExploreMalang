@@ -46,7 +46,7 @@ public class KategoriAdapter extends RecyclerView.Adapter<KategoriAdapter.MyView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
     }
