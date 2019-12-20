@@ -63,8 +63,6 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
                 Fragment myFragment = new InfoFragment();
                 myFragment.setArguments(b);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
-
-
             }
         });
     }

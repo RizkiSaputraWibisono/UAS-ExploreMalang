@@ -8,19 +8,6 @@ public class Request {
     private String deskripsiInfo;
     private String key;
 
-    public Request(String namaInfo, int gambarInfo, String jarakInfo, String tiketInfo, String deskripsiInfo) {
-        this.namaInfo = namaInfo;
-        this.gambarInfo = gambarInfo;
-        this.jarakInfo = jarakInfo;
-        this.tiketInfo = tiketInfo;
-
-        this.deskripsiInfo = deskripsiInfo;
-    }
-
-    public Request(){
-
-    }
-
     public String getKey() {
         return key;
     }

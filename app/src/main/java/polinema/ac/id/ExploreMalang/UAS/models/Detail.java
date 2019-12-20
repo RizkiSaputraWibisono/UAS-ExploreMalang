@@ -4,6 +4,7 @@ public class Detail {
 
     private String namaDetail;
     private int gambarDetail;
+    private String key;
 
     public Detail(String namaDetail, int gambarDetail) {
         this.namaDetail = namaDetail;
@@ -12,6 +13,14 @@ public class Detail {
 
     public Detail(){
 
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getNamaDetail() {

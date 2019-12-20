@@ -61,33 +61,33 @@ public class DetailFragment extends Fragment {
             itemDetail.add(detail);
         }
         else if(pos == 1){
-            Detail detail = new Detail("Pantai Teluk Asmoro",R.drawable.telukasmara);
+            Detail detail = new Detail("Pantai Teluk Asmoro",R.drawable.asmara4);
             itemDetail.add(detail);
             detail = new Detail("Pantai Balekambang",R.drawable.blk);
             itemDetail.add(detail);
-            detail = new Detail("Pantai Ngeliyep",R.drawable.ngeliyep);
+            detail = new Detail("Pantai Ngliyep",R.drawable.ngeliyep);
             itemDetail.add(detail);
-            detail = new Detail("Pantai Sendang Biru",R.drawable.sendangbiru);
+            detail = new Detail("Pantai 3 Warna",R.drawable.sendang2);
             itemDetail.add(detail);
             detail = new Detail("Pantai Ngudel",R.drawable.ngudel);
             itemDetail.add(detail);
         }
 
         else if(pos == 2){
-            Detail detail = new Detail("Museum Angkut",R.drawable.museumangkut);
+            Detail detail = new Detail("Museum Angkut",R.drawable.angkut);
             itemDetail.add(detail);
             detail = new Detail("Museum Brawijaya",R.drawable.brawijaya);
             itemDetail.add(detail);
-            detail = new Detail("Candi Singosari",R.drawable.candisingasari);
+            detail = new Detail("Candi Singosari",R.drawable.singosari6);
             itemDetail.add(detail);
             detail = new Detail("Candi Jawar Ombo",R.drawable.jawarombo);
             itemDetail.add(detail);
-            detail = new Detail("Museum Omah Munir",R.drawable.munir);
+            detail = new Detail("Museum Omah Munir",R.drawable.munir1);
             itemDetail.add(detail);
         }
 
         else if(pos == 3){
-            Detail detail = new Detail("Alun-Alun Kota Malang",R.drawable.alun);
+            Detail detail = new Detail("Alun-Alun Kota Malang",R.drawable.alun2);
             itemDetail.add(detail);
             detail = new Detail("Taman Krida Budaya",R.drawable.kridabudaya);
             itemDetail.add(detail);
@@ -95,14 +95,14 @@ public class DetailFragment extends Fragment {
             itemDetail.add(detail);
             detail = new Detail("Taman Merbabu / Nivea",R.drawable.nivea);
             itemDetail.add(detail);
-            detail = new Detail("Hutan Kota Malabar",R.drawable.malabar);
+            detail = new Detail("Hutan Kota Malabar",R.drawable.malabar2);
             itemDetail.add(detail);
         }
 
         else if(pos == 4){
             Detail detail = new Detail("Wisata Pujon Kidul",R.drawable.pujon);
             itemDetail.add(detail);
-            detail = new Detail("Taman Langit G.Banyak",R.drawable.banyak);
+            detail = new Detail("Taman Langit G.Banyak",R.drawable.banyak2);
             itemDetail.add(detail);
             detail = new Detail("Kampung Warna-Warni Jodipan",R.drawable.jodipan);
             itemDetail.add(detail);

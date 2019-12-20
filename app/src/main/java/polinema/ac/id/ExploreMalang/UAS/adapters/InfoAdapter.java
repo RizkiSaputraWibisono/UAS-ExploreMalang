@@ -78,7 +78,13 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
             @Override
             public void onClick(View view) {
 
-                Request r = new Request(nama,gambar,jarak,tiket,deskripsi);
+                Request r = new Request();
+
+                r.setGambarInfo(gambar);
+                r.setDeskripsiInfo(deskripsi);
+                r.setJarakInfo(jarak);
+                r.setNamaInfo(nama);
+                r.setTiketInfo(tiket);
 
                 DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
@@ -99,7 +105,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.MyViewHolder> 
         return (itemInfo != null) ? itemInfo.size() : 0;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView gambarInfo;
         public TextView namaInfo;
         public TextView jarakInfo;

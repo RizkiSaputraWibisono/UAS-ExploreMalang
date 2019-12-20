@@ -21,6 +21,10 @@ public class Info {
 
     }
 
+    public Info() {
+
+    }
+
 
     public String getNamaInfo() {
         return namaInfo;
